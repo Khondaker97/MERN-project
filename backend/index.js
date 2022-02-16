@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
     res.send('Hello to Memories API')
 });
 
-// const CONNECTION_URL = 'mongodb+srv://ktm97:tan130@memories.e7soj.mongodb.net/Memories?retryWrites=true&w=majority';
+
 const PORT = process.env.PORT;
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
